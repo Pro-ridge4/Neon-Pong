@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    background: #000;
+    color: white;
+}
+
+canvas {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#start-screen h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #0ff;
+    text-shadow:
+                0 0 5px #0ff,
+                0 0 10px #0ff,
+                0 0 20px #0ff,
+                0 0 40px #0ff;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff; }
+    100% { text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 50px #0ff; }
+}
+
+#start-screen .buttons {
+    margin: 20px 0;
+}
+
+#start-screen button {
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #111;
+    color: white;
+    text-shadow: 0 0 5px #fff;
+}
+
+#start-screen button.easy {
+    box-shadow: 0 0 10px #0f0;
+}
+#start-screen button.easy:hover {
+    box-shadow: 0 0 20px #0f0, 0 0 40px #0f0;
+    background: #0f0;
+    color: #000;
+}
+
+#start-screen button.medium {
+    box-shadow: 0 0 10px #ff0;
+}
+#start-screen button.medium:hover {
+    box-shadow: 0 0 20px #ff0, 0 0 40px #ff0;
+    background: #ff0;
+    color: #000;
+}
+
+#start-screen button.hard {
+    box-shadow: 0 0 10px #f00;
+}
+#start-screen button.hard:hover {
+    box-shadow: 0 0 20px #f00, 0 0 40px #f00;
+    background: #f00;
+    color: #000;
+}
+
+#start-screen .hint {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
